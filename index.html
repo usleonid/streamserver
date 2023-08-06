@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test streaming server</title>
+</head>
+<body>
+
+    <h1>Test Live Video</h1>
+
+    <div id="myPlayer"></div>
+
+    <script src="link_to_player_library"></script>
+    <script>
+        var playerInstance = jwplayer("myPlayer");
+        playerInstance.setup({
+            file: "rtmp://172.104.243.134:1935/live/leonid", 
+        });
+    </script>
+</body>
+</html>
