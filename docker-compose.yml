@@ -29,5 +29,7 @@ services:
     ports:
       - "1883:1883" # Expose MQTT port
       - "8083:8083" # Expose WebSocket port
+      - "8084:8084"
+      - "18083:18083"
     volumes:
       - ./emqx_data:/opt/emqx/data # Mount a volume for EMQX data
