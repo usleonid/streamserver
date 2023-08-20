@@ -22,3 +22,12 @@ services:
       - "8080:8080"
     # volumes:
     #   - /var/run/docker.sock:/var/run/docker.sock
+
+  emqx:
+    image: emqx/emqx:latest # Official EMQX Docker image
+    container_name: emqx_server
+    ports:
+      - "1883:1883" # Expose MQTT port
+      - "8083:8083" # Expose WebSocket port
+    volumes:
+      - ./emqx_data:/opt/emqx/data # Mount a volume for EMQX data
