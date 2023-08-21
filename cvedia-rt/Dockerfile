@@ -31,7 +31,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # copy script for instance launching
-COPY start_instance.sh ./start_instance.sh
-RUN chmod +x ./start_instance.sh
+# COPY start_instance.sh ./start_instance.sh
+# RUN chmod +x ./start_instance.sh
 
-CMD ["./start_instance.sh"]
+CMD ["cvediart", "--remote"]
