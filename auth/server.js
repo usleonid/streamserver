@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const timestamp = new Date().getTime().toString()
 
 app.use(express.urlencoded());
 
@@ -8,7 +9,12 @@ app.post("/auth", function (req, res) {
   const streamkey = req.body.key;
 
   /* You can make a database of users instead :) */
-  if (streamkey === "supersecret") {
+  // if (streamkey === "supersecret") {
+  //   res.status(200).send();
+  //   return;
+  // }
+
+  if (streamkey === timestamp) {
     res.status(200).send();
     return;
   }
