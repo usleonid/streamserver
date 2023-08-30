@@ -10,9 +10,9 @@ services:
     volumes:
       - ./data:/tmp/hls
 
-  # auth:
-  #   build: ./auth
-  #   container_name: auth_server
+  auth:
+    build: ./auth
+    container_name: auth_server
 
   # cvedia-rt:
   #   build:
