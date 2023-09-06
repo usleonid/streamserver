@@ -9,7 +9,7 @@ services:
     container_name: rtmp_server
     volumes:
       - ./data:/tmp/hls
-      - ./recordings:/tmp/videorecordings
+      - ./recordings:/tmp/live
 
   # auth:
   #   build: ./auth
