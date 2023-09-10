@@ -21,6 +21,7 @@ services:
     container_name: cvedia_rt_instance
     ports:
       - "8080:8080"
+      - "8889:8889"
     environment:
       - TRACY_NO_INVARIANT_CHECK=1
     # volumes:
